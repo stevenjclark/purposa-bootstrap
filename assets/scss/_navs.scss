@@ -1,0 +1,416 @@
+/* NAV BAR - LAYOUT
+================================================== */
+@include media-breakpoint-down(sm) {
+  .navbar {
+    padding: 16px;
+  }
+}
+.navbar-light {
+  background-color: $white;
+}
+
+
+/* NAV BAR - LOGO AND PRODUCT NAME
+================================================== */
+.navbar-brand {
+  width: 178px;
+  height: 40px;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: url(#{$drg-image-path}/purposa.svg?v=1.2) no-repeat;
+}
+.bg-primary .navbar-brand {
+  background: url(#{$drg-image-path}/purposa-white.svg?v=1.2) no-repeat;	
+}
+@include media-breakpoint-down(sm) {
+  .navbar-brand {
+   	height: 32px;
+   	width: 142px;
+	 	background-size: cover
+  }
+}
+.navbar-nav .nav-link:not(.btn) {
+	padding: .625rem 0;
+	border-width: 0;
+	font-size: 1rem;
+	border-bottom: 0.125rem solid transparent;
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+	color: $gray-800;
+	font-weight: 500;
+}
+.navbar-nav .nav-link:not(.btn):hover {
+	color: $gray-900;	
+	background: none !important;
+}
+.navbar-nav .nav-item.active .nav-link:not(.btn),
+.navbar-nav .nav-item.active .nav-link:not(.btn):hover,
+.navbar-nav .nav-link:not(.btn).active,
+.navbar-nav .nav-link:not(.btn).active:hover {
+	border-bottom-color: $secondary;
+	color: $gray-900;
+	background: none !important;
+}
+.bg-primary .navbar-nav .nav-link:not(.btn) {
+	color: $white;
+}
+.bg-primary .navbar-nav .nav-link:not(.btn):hover {
+	color: $white;	
+}
+.bg-primary .navbar-nav .nav-item.active .nav-link:not(.btn),
+.bg-primary .navbar-nav .nav-item.active .nav-link:not(.btn):hover,
+.bg-primary .navbar-nav .nav-link:not(.btn).active,
+.bg-primary .navbar-nav .nav-link:not(.btn).active:hover {
+	color: $white;
+}
+/* Nav with Buttons */
+.navbar .navbar-nav > li > a.nav-link.btn {
+  color: $gray-800;
+  margin-left: 1.5rem;
+  border-radius: 2.5rem;
+  font-size: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.navbar .navbar-nav > li > a.nav-link.btn-secondary:hover {
+	color: $gray-900;
+}
+
+/* Nav
+================================================== */
+.nav .nav-link {
+	color: $gray-800;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+}
+.nav .nav-link.disabled {
+	color: $gray-400;	
+}
+.nav.flex-column {
+	flex-wrap: nowrap;
+}
+.nav .nav-link:not(.btn):hover {
+	background: rgba($primary,0.075)
+}
+
+
+
+/* Nav dark */
+.nav.nav-dark .nav-link:not(.btn),
+.navbar-dark .nav .nav-link:not(.btn) {
+	color: rgba($white,0.8);	
+}
+.nav.nav-dark .nav-link.disabled,
+.navbar-dark .nav .nav-link.disabled {
+	color: rgba($white,0.4);	
+}
+.nav.nav-dark .nav-link:not(.btn):hover,
+.nav.nav-dark .nav-link:not(.btn).active,
+.nav.nav-dark .nav-item.active > .nav-link:not(.btn),
+.navbar-dark .nav .nav-link:not(.btn):hover,
+.navbar-dark .nav .nav-link:not(.btn).active,
+.navbar-dark .nav .nav-item.active > .nav-link:not(.btn) {
+  background-color: rgba($white, 0.1);
+	color: $white;
+}
+.nav.nav-dark.nav-underline .nav-link:not(.btn).active,
+.navbar-dark .nav.nav-underline .nav-link:not(.btn).active,
+.nav.nav-dark.nav-underline .nav-item.active > .nav-link:not(.btn),
+.navbar-dark .nav.nav-underline .nav-item.active > .nav-link:not(.btn) {
+	border-bottom-color: $white;
+	color: $white;
+	background-color: transparent;
+}
+.nav.nav-dark.nav-tabs .nav-link:not(.btn).active,
+.navbar-dark .nav.nav-tabs .nav-link:not(.btn).active,
+.nav.nav-dark.nav-tabs .nav-item.active > .nav-link:not(.btn),
+.navbar-dark .nav.nav-tabs .nav-item.active > .nav-link:not(.btn) {
+	border-color: rgba($black,0.1);
+	border-bottom-color: $white;
+	background-color: $white;
+	color: $primary;
+	-moz-background-clip: padding;     /* Firefox 3.6 */
+  -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+  background-clip: padding-box; 
+}
+
+
+/* Navbar */
+.navbar-nav {
+  position: relative;
+}
+.nav.navbar-nav .nav-link {
+  line-height: 0.875rem;
+  height: 2.5rem;
+}
+
+/* Nav Underline */
+.nav.nav-underline .nav-link {
+	padding: .625rem 1rem;
+	border-width: 0;
+	border-bottom: 0.25rem solid transparent;
+}
+.nav.nav-underline .nav-link:not(.btn).active,
+.nav.nav-underline .nav-link:not(.btn).active:hover {
+	border-bottom-color: $primary;
+	color: darken($primary,10%);
+	background: none;
+}
+.nav.nav-underline .dropdown.show .nav-link:not(.btn) {
+	padding-top: calc(0.625rem - 1px);
+	padding-left: calc(1rem - 1px);
+	padding-right: calc(1rem - 1px);
+	padding-bottom: 0.875rem;
+	border-width: 1px;
+}
+
+/* Nav Tabs */
+.nav-tabs.no-underline {
+	border-bottom-color: transparent;
+}
+.nav.nav-tabs .nav-link {
+	padding-top: calc(0.75rem - 1px);
+	padding-bottom: calc(0.75rem - 1px);
+}
+.nav.nav-tabs .nav-link:not(.btn).active,
+.nav.nav-tabs .nav-link:not(.btn).active:hover {
+	background-color: $white !important;
+	color: darken($primary,10%) !important;
+	border-left-color: $gray-200;
+	border-right-color: $gray-200;
+	border-top-color: $gray-200;
+}
+
+/* Nav with Dropdown */
+.nav > .show > .nav-link:not(.btn), 
+.nav > .show > .nav-link:not(.btn):hover, 
+.nav > .show > .nav-link:not(.btn):focus,
+.nav > .show.active > .nav-link:not(.btn), 
+.nav > .show.active > .nav-link:not(.btn):hover, 
+.nav > .show.active > .nav-link:not(.btn):focus {
+  background-color: $white !important;
+  border-radius: $border-radius $border-radius 0 0; 
+  border-color: rgba($black,0.1);
+  border-bottom: none;
+  color: darken($primary,10%) !important;
+  outline: none;
+  position: relative;
+  z-index: 1001;
+	-moz-background-clip: padding;     /* Firefox 3.6 */
+  -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+  background-clip: padding-box; 
+}
+.nav .dropdown-menu {
+  border-top-left-radius: 0;
+  margin-top: -1px;
+  width: calc(100% + 0.5rem)
+}
+.nav-tabs .dropdown-menu {
+	border-top-right-radius: $border-radius;
+}
+.nav .dropdown-menu.dropdown-menu-right {
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: 0;
+}
+.nav .nav-link.dropdown-toggle {
+	outline: none;
+}
+
+
+
+
+
+/* NAV BAR - MEGA MENU
+================================================== */
+.navbar-nav li.mega-menu {
+  position:initial
+}
+.navbar-nav li.mega-menu > .dropdown-menu {
+  width: 100%;
+  min-width: 0;
+  left: 0;
+  right:0;
+  top: 40px;
+  padding: 16px;
+}
+.navbar .navbar-nav > .show.mega-menu > .dropdown-menu {
+  border-top-left-radius: $border-radius;
+}
+.navbar .navbar-nav > .show.mega-menu:first-child > .dropdown-menu {
+  border-top-left-radius: 0;
+}
+
+
+/* NAV BAR - COLLAPSED MENU
+================================================== */
+.navbar-collapse.show .navbar-nav .dropdown-menu,
+.navbar-collapse.collapsing .navbar-nav .dropdown-menu {
+  border: none;
+  border-left: 2px solid $gray-100;
+  border-radius: 0 !important;
+  padding: 0 0 0 16px !important;
+  margin: 0 0 16px 0 !important;
+  box-shadow: none;
+}
+.navbar-collapse.show .navbar-nav .nav-link:not(.btn),
+.navbar-collapse.collapsing .navbar-nav .nav-link:not(.btn),
+.navbar-collapse.show .navbar-nav .dropdown-item:not(.btn),
+.navbar-collapse.collapsing .navbar-nav .dropdown-item:not(.btn)  {
+  border-color: transparent !important;
+  background: none !important;
+  line-height: 2.5rem;
+  height: auto;
+  font-size: 1.25rem;
+  text-align: center;
+}
+.navbar-collapse .navbar-nav .nav-link.dropdown-toggle:after {
+  float: right;
+}
+.navbar-collapse.show .navbar-nav .nav-link.btn,
+.navbar-collapse.collapsing .navbar-nav .nav-link.btn {
+  margin-left: 0;
+  margin-top: 1rem;
+}
+
+
+/* NAV BAR - COLLAPSED MENU TOGGLE
+================================================== */
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+  text-transform: uppercase;
+  line-height: 32px;
+  color: $gray-800 !important;
+}
+.navbar-dark .navbar-toggler {
+  color: $white;
+}
+.icon-bars {
+  display: inline-block;
+  margin-right: 4px;
+  margin-top: 2px;
+  position: relative;
+  top: 2px;
+} 
+.icon-bar {
+	width: 22px; 
+	height: 2px;
+	background-color: $gray-800;
+	display: block;
+	transition: all 0.2s;
+	margin-top: 4px;
+}
+.bg-primary .icon-bar {
+  background-color: $white;
+}
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggler .middle-bar {
+  opacity: 0;
+} 
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+
+/* NAV VERTICAL
+================================================== */
+.nav-vertical-header {
+	padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+} 
+.nav.flex-column .nav.flex-column .nav-link,
+.nav.flex-column.condensed .nav-link {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem 1rem;
+}
+.nav.flex-column .nav.flex-column .nav-item {
+  padding-left: 1rem;
+}
+.nav.flex-column .nav-link.active {
+	color: darken($primary,10%);
+	background: rgba($primary,0.2);
+	border-radius: 0.5rem;
+	font-weight: 600;
+}
+.nav-link.collapse-toggle {
+  padding-right: 2rem;
+  position: relative;
+}
+.nav-link.collapse-toggle::after {
+  position: absolute;
+  right: 1rem;
+}
+.nav-link.collapse-toggle.active {
+	background: none;	
+}
+.nav.flex-column.nav-tree {
+  position: relative;
+}
+.nav.flex-column.nav-tree .nav-item,
+.nav.flex-column .nav.flex-column.nav-tree .nav-item {
+	padding-left: 1.5rem;
+  position: relative;
+}
+.nav.flex-column.nav-tree .nav-link,
+.nav.flex-column .nav.flex-column.nav-tree .nav-link {
+	padding-left: 1.5rem;
+  position: relative;
+}
+.nav.flex-column.nav-tree:before,
+.nav.flex-column.nav-tree .nav-item:before,
+.nav.flex-column.nav-tree .nav-item:last-child:after,
+.nav.flex-column.nav-tree .nav-link:before {
+  content: '';
+  position: absolute;  
+  z-index: 1;  
+}
+.nav.flex-column.nav-tree:before,
+.nav.flex-column.nav-tree li:before {
+  background: $gray-200;
+}
+.nav.flex-column.nav-tree:before {
+  width: 1px;
+  left: 16px;
+  top: 0;
+  height: calc(100% - 17px); 
+}
+.nav.flex-column.nav-tree .nav-item:before {
+  width: 16px;
+  height: 1px;
+  left: 16px;
+  top: 15px;  
+}
+.nav.flex-column.nav-tree .nav-item:last-child:after {
+  width: 1px;
+  height: calc(100% - 16px);
+  left: 16px;
+  top: 16px;
+  background-color: $gray-50;
+  z-index: 2;
+}
+.nav.flex-column.nav-tree .nav-link:before {
+  left: 8px;
+  top: 13px;
+  width: 5px;
+  height: 5px;
+  background: $gray-400;
+  border-radius: 50%;
+}
+.nav.flex-column.nav-tree .nav-link:hover:before,
+.nav.flex-column.nav-tree .nav-link.active:before {
+  background: $primary;
+}

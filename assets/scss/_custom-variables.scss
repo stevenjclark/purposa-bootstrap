@@ -1,0 +1,282 @@
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+
+// Settings
+$drg-image-path: "../images";
+$drg-font-path: "../fonts";
+$fa-font-path: $drg-font-path;
+$enable-shadows:  true;
+$grid-gutter-width: 32px;
+
+// Fonts
+$font-family-sans-serif: 'Avenir Next W01', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+
+// Primary
+$teal: #64a9c3;
+$yellow: #ffe47d;
+$primary: $teal;
+$secondary: $yellow;
+
+// Alerts
+$blue: #0199D6;
+$red: #AC1D40;
+$orange: #ED7625;
+$green: #70A94F;
+
+
+// Neautrals
+$white:    #fff;
+$gray-50: #f3f4f4;
+$gray-100: #e7e8e9;
+$gray-200: #d0d3d4;
+$gray-300: #b8bcbe;
+$gray-400: #a1a7a9;
+$gray-500: #899093;
+$gray-600: #727a7d;
+$gray-700: #5a6467;
+$gray-800: #434e52;
+$gray-900: #2b383c;
+$black:    #142227;
+
+
+$theme-colors: (
+  primary: $teal,
+  secondary: $yellow,
+  info: $blue,
+  success: $green,
+  warning: $orange,
+  danger: $red,
+  light: $gray-50,
+  dark: $gray-800
+) !default;
+
+
+
+// Spacers
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  4: ($spacer * .25),
+  8: ($spacer * .5),
+  16: $spacer,
+  24: ($spacer * 1.5),
+  32: ($spacer * 2),
+  48: ($spacer * 3),
+  64: ($spacer * 4),
+  80: ($spacer * 5),
+  96: ($spacer * 6),
+  112: ($spacer * 7),
+  128: ($spacer * 8)  
+);
+
+
+$component-active-bg:         theme-color("primary") !default;
+
+// Body
+$body-bg: $gray-50;
+$body-color: $gray-900;
+
+
+// Radius
+$border-radius-sm: 0.5rem;
+$border-radius: 0.75rem;
+$border-radius-lg: 1rem;
+$border-radius-xl: 2rem;
+
+
+// Font
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$text-muted:    $gray-600;
+
+$font-weight-light:           400;
+$font-weight-normal:          500;
+$font-weight-bold:            600;
+$font-weight-bolder:          700;
+$font-weight-base:            $font-weight-light;
+
+
+$h1-font-size:                3rem;
+$h2-font-size:                2.25rem;
+$h3-font-size:                1.5rem;
+$h4-font-size:                1.25rem;
+$h5-font-size:                1.125rem;
+$h6-font-size:                1rem;
+
+$headings-font-weight:        600;
+$headings-margin-bottom:    $spacer * 1.5;
+$paragraph-margin-bottom:   $spacer * 1.5;
+$hr-margin-y:               $spacer * 1.5;
+
+$lead-font-size:              1.5rem;
+$lead-font-weight:            400;
+
+
+// Box Shadows
+$box-shadow-sm:               0 .05rem .125rem rgba($black, .15);
+$box-shadow:                  0 .1rem .25rem rgba($black, .15);
+$box-shadow-lg:               0 .2rem .5rem rgba($black, .15);
+$box-shadow-xl: 							0 .4rem 1rem rgba($black,.15);
+
+
+// Links
+$link-color:                              darken($primary, 5%);
+$link-hover-color:                        darken($primary, 10%);
+$link-hover-decoration:                   none;
+
+
+// Badges
+$badge-border-radius:               $border-radius-sm;
+$badge-padding-y:                   .25rem;
+$badge-padding-x:                   .5rem;
+
+
+// Navbar
+$navbar-padding-y: 2rem;
+$navbar-padding-x: 2rem;
+$navbar-nav-link-padding-x: 1rem;
+$nav-link-padding-y: 0.75rem;
+
+$navbar-toggler-padding-y: 0;
+$navbar-toggler-padding-x: 0;
+$navbar-toggler-font-size: 14px;
+$navbar-toggler-border-radius: 0;
+
+
+
+// Buttons / Inputs
+$btn-font-weight:             600;
+$btn-box-shadow:              $box-shadow-sm;
+$btn-active-box-shadow:       $box-shadow;
+$btn-focus-width:             0;
+$btn-link-disabled-color:     $gray-400;
+
+$btn-padding-y:         .5rem;
+$btn-padding-x:         1rem;
+$btn-font-size:         .875rem;
+$btn-line-height:       14px;
+
+$btn-padding-y-sm:      .25rem;
+$btn-padding-x-sm:      .5rem;
+$btn-font-size-sm:      .75rem;
+$btn-line-height-sm:    14px;
+
+$btn-padding-y-lg:      .75rem;
+$btn-padding-x-lg:      2rem;
+$btn-font-size-lg:      1rem;
+$btn-line-height-lg:    22px;
+
+
+$btn-border-radius:           1rem !default;
+$btn-border-radius-lg:        1.5rem !default;
+$btn-border-radius-sm:        0.75rem !default;
+
+
+
+$component-active-bg:         $primary;
+$custom-checkbox-indicator-border-radius:       .25rem;
+
+
+$list-group-color:                  $gray-800;
+$list-group-bg:                     $white;
+$list-group-border-width:           0;
+$list-group-border-radius:          0;
+
+$list-group-item-padding-y:         .5rem;
+$list-group-item-padding-x:         .75rem;
+
+$list-group-hover-bg:               rgba($primary, 0.05);
+
+$list-group-disabled-color:         $gray-400;
+$list-group-disabled-bg:            $list-group-bg;
+
+$list-group-action-color:           $gray-700;
+
+$list-group-action-active-color:    $body-color;
+$list-group-action-active-bg:       $gray-200;
+
+
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+$alert-padding-y:                   1rem;
+$alert-padding-x:                   1rem;
+$alert-margin-bottom:               2rem;
+$alert-border-width:                2px;
+
+$alert-border-level:                0;
+
+
+
+$tooltip-bg:                        $gray-900;
+$tooltip-border-radius:             $border-radius-sm;
+
+// Cards
+$card-spacer-y:               		2rem;
+$card-spacer-x:               		0rem;
+$card-cap-bg:                 		$white;
+$card-border-color:           		rgba($black,0.1);
+
+// Dropdowns
+$dropdown-padding-y:                .25rem;
+$dropdown-divider-bg:               $gray-100;
+$dropdown-border-color:             rgba($black, .1);
+$dropdown-link-color:               $gray-800;
+$dropdown-link-hover-color:         $primary;
+$dropdown-link-hover-bg:            rgba($primary, 0.05);
+$dropdown-link-active-color:        $primary;
+$dropdown-link-active-bg:           rgba($primary, 0.05);
+$dropdown-link-disabled-color:      $gray-400;
+$dropdown-item-padding-y:           .5rem;
+$dropdown-item-padding-x:           0.75rem;
+$dropdown-header-color:             $gray-900;
+$dropdown-box-shadow:               $box-shadow-lg;
+
+// Modals
+$modal-inner-padding:               2rem; 
+$modal-header-padding-y:            2rem;
+$modal-header-padding-x:            0;
+$modal-content-border-color:        rgba($black, .1);
+$modal-content-box-shadow-sm-up:    $box-shadow-xl;
+
+// Popovers
+$popover-border-color:              rgba($black, .1);
+$popover-box-shadow:                $box-shadow-lg;
+$popover-header-bg:                 $white;
+$popover-header-padding-y:          .5rem;
+$popover-header-padding-x:          0;
+$popover-body-padding-y:            1rem;
+$popover-body-padding-x:            1rem;
+$popover-arrow-outer-color:         $popover-border-color;
+
+
+
+
+// Inputs boxes
+$input-color:                           $gray-900 !default;
+$input-border-color:                    $gray-200 !default;
+$input-placeholder-color:               $gray-400 !default;
+$input-disabled-bg:                     $gray-50 !default;
+$input-group-addon-bg:                  $gray-50 !default;
+$input-focus-border-color:              tint($component-active-bg, 50%) !default;
+$custom-select-disabled-bg:         $input-disabled-bg !default;
+
+
+$input-height:                        2.5rem;
+$input-height-sm:                     2rem;
+$input-height-lg:                     3rem;
+
+
+$nav-link-disabled-color:           $gray-400 !default;
+$nav-tabs-border-color:             $gray-200 !default;
+$nav-tabs-link-hover-border-color:  transparent !default;
+$nav-tabs-link-active-color:        $secondary !default;
+$nav-tabs-link-active-bg:           $white !default;
+$nav-tabs-link-active-border-color: $gray-200 $gray-200 $nav-tabs-link-active-bg !default;
